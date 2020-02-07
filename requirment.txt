@@ -1,0 +1,9 @@
+asgiref==3.2.3
+Django==3.0.2
+django-hosts==4.0
+pytz==2019.3
+reverse==0.1.0
+sqlparse==0.3.0
+views==0.3
+virtualenv==16.7.9
+virtualenvwrapper-win==1.2.5

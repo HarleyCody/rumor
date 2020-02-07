@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f1135675-0ec8-47d4-b878-cbdae1ceab26" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Rumor/static/Rumor/404.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Rumor/templates/Rumor/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Rumor/templates/Rumor/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Rumor/templates/Rumor/result.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Rumor/templates/Rumor/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Rumor/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RumorValidator/hosts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RumorValidator/hostsconf/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RumorValidator/hostsconf/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RumorValidator/hostsconf/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/result_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rumor/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rumor/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rumor/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rumor/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RumorValidator/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/RumorValidator/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RumorValidator/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/RumorValidator/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/src/db.sqlite3" afterDir="false" />
-    </list>
+    <list default="true" id="f1135675-0ec8-47d4-b878-cbdae1ceab26" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Rumor/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-23">
-              <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+            <state relative-caret-position="162">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="e#0#61#0" expanded="true" />
                 <element signature="e#1521#1693#0" />
@@ -152,7 +132,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="width" value="1297" />
     <option name="height" value="1372" />
@@ -465,8 +445,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Rumor/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23">
-          <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+        <state relative-caret-position="162">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#0#61#0" expanded="true" />
             <element signature="e#1521#1693#0" />
