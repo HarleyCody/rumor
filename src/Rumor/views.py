@@ -2,7 +2,7 @@ from django.core.paginator import Paginator, PageNotAnInteger
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse
 
-from src.RumorValidator import settings
+from RumorValidator import settings
 from django.utils import timezone
 from django.views import View
 from .models import Rumor

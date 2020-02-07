@@ -25,7 +25,7 @@ SECRET_KEY = '!yyj7j6rhf=b-pzvolj*9350p$o%cf6ys1^1_f!(2@5k(jjz(!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['rumor.com', 'www.rumor.com']
+ALLOWED_HOSTS = ['rumor.com', 'www.rumor.com', 'ncov201912.herokuapp.com']
 
 
 # Application definition

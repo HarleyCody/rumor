@@ -1,5 +1,5 @@
 from django.db import models
-from src.RumorValidator import settings
+from RumorValidator import settings
 # Create your models here.
 
 
