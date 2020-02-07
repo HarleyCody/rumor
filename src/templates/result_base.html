@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rumors in {{ name }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/4.0/examples/cover/cover.css" rel="stylesheet">
+</head>
+
+<body class="text-center" data-gr-c-s-loaded="true">
+<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+<main role="main" class="inner cover">
+    <blockquote class="blockquote">
+        <p class="mb-0" style="color:#000f1a">此后如竟没有炬火：我便是唯一的光。倘若有了炬火，出了太阳，我们自然心悦诚服的消失，不但毫无不平，而且还要随喜赞美这炬火或太阳；因为他照了人类，连我都在内。</p>
+        <footer class="blockquote-footer">鲁迅<cite title="Source Title">《热风》</cite></footer>
+    </blockquote>
+    {% block content %}
+    {% endblock content %}
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+{% extends "result_base.html" %}
+{% block content %}
+{% block styles %}
+    <style>
+    body{
+        background-color:#1e3651;
+        background-image:url('https://elkgroveses.com/image/53603-full_marble-background-png-free-marble-background-png.png');
+        background-size: cover;
+        height: 100%;
+    }
+    .btn-link{
+        color:#b8bcfe;
+        text-shadow: none;
+    }
+    .btn-link:hover{
+        color:#000000;
+    }
+    blockquote{
+        background-color : #ffffff;
+        opacity: .8;
+    }
+    table{
+        background-color : #ffffff;
+        opacity: .8;
+    }
+    </style>
+{% endblock styles %}
+<nav class="navbar navbar-light bg-light justify-content-between">
+    <a class="navbar-brand">{{ name }}</a>
+    <form class="form-inline" method="GET" action=".">
+        <input class="form-control mr-sm-2" name = "keywords" type="search" placeholder="关键词" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
+    </form>
+</nav>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">传言</th>
+        <th scope="col">结果</th>
+        <th scope="col">更多</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for obj in results %}
+    <tr>
+        <td>{{ obj.rumor }}</td>
+        <td>{% if obj.isReal %} 真 {% else %} 假 {% endif %}</td>
+        <td><a href = "{{obj.get_absolute_url}}" class = "btn btn-primary" role = "button">View</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<ul class="pagination justify-content-center">
+    {% if results.has_previous %}
+    <li class="page-item">
+        <a class="page-link" href="?page={{ results.previous_page_number }}">&laquo;</a></li>
+    {% endif %}
+    <li class="page-link">{{ results.number }} / {{ results.paginator.num_pages}}</li>
+    {% if results.has_next %}
+    <li class="page-item">
+        <a class="page-link" href="?page={{ results.next_page_number }}">&raquo;</a></li>
+    {% endif%}
+</ul>
+{% endblock content %}

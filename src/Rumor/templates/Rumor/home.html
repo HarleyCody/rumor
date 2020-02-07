@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+{% block styles %}
+    <style>
+    body{
+        background-color:#1e3651;
+        background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/China_Pop_Density.svg/2000px-China_Pop_Density.svg.png');
+        background-size: cover;
+        height: 100%;
+    }
+    .btn-link{
+        color:#b8bcfe;
+        text-shadow: none;
+    }
+    .btn-link:hover{
+        color:#000000;
+    }
+    blockquote{
+        background-color : #ffffff;
+        opacity: .8;
+    }
+    </style>
+{% endblock styles%}
+<h1 class="cover-heading">Rumor is Virus</h1>
+<blockquote class="blockquote">
+  <p class="mb-0" style="color:#000f1a">愿中国青年都摆脱冷气，只是向上走，不必听自暴自弃者流的话。能做事的做事，能发声的发声。有一分热，发一分光，就令萤火一般，也可以在黑暗里发一点光，不必等候炬火。</p>
+  <footer class="blockquote-footer">鲁迅<cite title="Source Title">《热风》</cite></footer>
+</blockquote>
+<div class="col-sm-12 col-sm-offset-4">
+    <form method='POST' action ='.'>{% csrf_token %}
+        <select class="form-control" name="province" required>
+            <option value="">请选择省份</option>
+            {% for id, cn in provinces.items %}
+            <option value="{{ id }}" >{{ cn }}</option>
+            {% endfor %}
+        </select>
+        <p></p>
+        <input class='btn btn-info' type="submit" value="Rumors">
+    </form>
+</div>
+
+{% endblock content %}

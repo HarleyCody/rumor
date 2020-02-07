@@ -25,7 +25,7 @@ SECRET_KEY = '!yyj7j6rhf=b-pzvolj*9350p$o%cf6ys1^1_f!(2@5k(jjz(!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['rumor.com', 'www.rumor.com']
 
 
 # Application definition
@@ -37,13 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    #third party
+    'django_hosts',
     #custom app
     'Rumor',
     'Volunteer',
 ]
 
 MIDDLEWARE = [
+    'django_hosts.middleware.HostsRequestMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -51,23 +53,36 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_hosts.middleware.HostsResponseMiddleware',
 ]
 AUTH_USER_MODEL = 'Volunteer.Volunteer'
 ROOT_URLCONF = 'RumorValidator.urls'
-PROVINCE_CHOICES =(('HB', u'湖北'),('BJ', u'北京'),('SH', u'上海'),('CQ', u'重庆'),
-                   ('HuN', u'湖南'),('SC', u'四川'),('HeN', u'河南'),('AH', u'安徽'),
-                   ('JS', u'江苏'),('SD', u'山东'),('ZJ', u'浙江'),('FJ', u'福建'),
-                   ('GD', u'广东'),('AM', u'澳门'),('HaiN', u'海南'),('GX', u'广西'),
-                   ('YN', u'云南'),('GZ', u'贵州'),('SX', u'陕西'),('NX', u'宁夏'),
-                   ('SaX', u'山西'),('HeB', u'河北'),('TJ', u'天津'),('LN', u'辽宁'),
-                   ('GL', u'吉林'),('HLJ', u'黑龙江'),('NMG', u'内蒙古'),('XJ', u'新疆'),
-                   ('JX', u'江西'),('GS', u'甘肃'),('XG', u'香港'),('TW', u'台湾'),
-                   ('QH', u'青海'),('XZ', u'西藏')
-                   )
+ROOT_HOSTCONF = 'RumorValidator.hosts'
+DEFAULT_HOST = 'www'
+
+PROVINCE_CHOICES =(('HB', u'湖北'), ('BJ', u'北京'), ('SH', u'上海'), ('CQ', u'重庆'),
+                   ('HuN', u'湖南'), ('SC', u'四川'), ('HeN', u'河南'), ('AH', u'安徽'),
+                   ('JS', u'江苏'), ('SD', u'山东'), ('ZJ', u'浙江'), ('FJ', u'福建'),
+                   ('GD', u'广东'), ('AM', u'澳门'), ('HaiN', u'海南'), ('GX', u'广西'),
+                   ('YN', u'云南'), ('GZ', u'贵州'), ('SX', u'陕西'), ('NX', u'宁夏'),
+                   ('SaX', u'山西'), ('HeB', u'河北'), ('TJ', u'天津'), ('LN', u'辽宁'),
+                   ('GL', u'吉林'), ('HLJ', u'黑龙江'), ('NMG', u'内蒙古'), ('XJ', u'新疆'),
+                   ('JX', u'江西'), ('GS', u'甘肃'), ('XG', u'香港'), ('TW', u'台湾'),
+                   ('QH', u'青海'), ('XZ', u'西藏'))
+
+PROVINCE_DICTIONARYS ={'HB': u'湖北', 'BJ': u'北京', 'SH': u'上海', 'CQ': u'重庆',
+                       'HuN': u'湖南', 'SC': u'四川', 'HeN': u'河南', 'AH': u'安徽',
+                       'JS': u'江苏', 'SD': u'山东', 'ZJ': u'浙江', 'FJ': u'福建',
+                       'GD': u'广东', 'AM': u'澳门', 'HaiN': u'海南', 'GX': u'广西',
+                       'YN': u'云南', 'GZ': u'贵州', 'SX': u'陕西', 'NX': u'宁夏',
+                       'SaX': u'山西', 'HeB': u'河北', 'TJ': u'天津', 'LN': u'辽宁',
+                       'GL': u'吉林', 'HLJ': u'黑龙江', 'NMG': u'内蒙古', 'XJ': u'新疆',
+                       'JX': u'江西', 'GS': u'甘肃', 'XG': u'香港', 'TW': u'台湾',
+                       'QH': u'青海', 'XZ': u'西藏'}
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,7 +133,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
@@ -131,3 +146,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
