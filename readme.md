@@ -3,7 +3,7 @@
 This App(Rumor) will cooperate with volunteers from different provinces of China to provide authentic and certain information.
 
 ## Getting Started
-I will instruct you to deploy this app on your local environment(mainly, Windows). Other system and take.
+I will instruct you to deploy this app on your local environment(mainly, Windows).
 
 Steps are:
 
